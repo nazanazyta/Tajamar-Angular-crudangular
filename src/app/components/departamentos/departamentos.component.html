@@ -1,0 +1,26 @@
+<div *ngIf="departamentos.length > 0">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Nombre</th>
+                <th>Localidad</th>
+                <th>Eliminar</th>
+                <th>Modificar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dept of departamentos">
+                <td>{{ dept.numero }}</td>
+                <td>{{ dept.nombre }}</td>
+                <td>{{ dept.localidad }}</td>
+                <td>
+                    <a class="btn btn-danger" [routerLink]="['/eliminar', dept.numero]">Eliminar</a>
+                </td>
+                <td>
+                    <a class="btn btn-primary" [routerLink]="['/modificar', dept.numero]">Modificar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

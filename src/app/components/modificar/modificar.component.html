@@ -1,0 +1,15 @@
+<div *ngIf="departamento != null" style="width: 50%; margin: auto; text-align: center">
+    <h1 style="color: blue">Modificar departamento</h1>
+    <form #updateForm="ngForm">
+        <label>Número: </label>
+        <input type="number" class="form-control" #cajanumero name="cajanumero"
+        value="{{ departamento.numero }}" /><br />
+        <label>Nombre: </label>
+        <input type="text" class="form-control" #cajanombre name="cajanombre"
+        value="{{ departamento.nombre }}" /><br/>
+        <label>Localidad: </label>
+        <input type="text" class="form-control" #cajalocalidad name="cajalocalidad"
+        value="{{ departamento.localidad }}" /><br />
+        <button (click)="modificarDepartamento()" class="btn btn-info">Modificar</button>
+    </form>
+</div>
